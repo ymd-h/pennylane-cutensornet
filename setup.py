@@ -11,6 +11,6 @@ setup(name="pennylane-cutensornet",
           "cirq": ["pennylane-cirq"],
           "test": ["pytest", "pytest_mock", "flaky"],
       },
-      entrypoints={"pennylane.plugins": [
+      entry_points={"pennylane.plugins": [
           "cuquantum.cutensornet = pennylane_cutensornet.cuTensorNetDevice"
       ]})
