@@ -6,6 +6,19 @@ cuTensorNet of NVIDIA cuQuantum.
 **Notes**
 > The official PennyLane-Lightning-GPU plugin supports cuStateVec of cuQuantum
 
+## Usage
+
+This plugin provides "cuquantum.cutensornet" device.
+The device can take optional argument `mode` to specify intermediate circuit.
+
+```python
+import pennylane as qml
+
+n_qubits = 3
+mode = "cirq" # or "qiskit"
+dev = qml.device("cuquantum.cutensornet", wires=n_qubits, mode=mode)
+```
+
 
 ## References
 - [PennyLane](https://pennylane.ai/) ([GitHub](https://github.com/PennyLaneAI/pennylane))
