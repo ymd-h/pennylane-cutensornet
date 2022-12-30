@@ -95,7 +95,7 @@ class cuTensorNetDevice(qml.QubitDevice):
     }
 
     def __init__(self,
-                 wires: Union[int, Iterable[int, str]],
+                 wires: Union[int, Iterable[Union[int, str]]],
                  shots: Union[None, int, List[int]],
                  mode: Literal["qiskit", "cirq"] = "qiskit"):
         super().__init__(wires=wires, shots=shots)
