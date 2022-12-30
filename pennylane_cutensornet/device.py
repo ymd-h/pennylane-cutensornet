@@ -34,7 +34,7 @@ class cuTensorNetDevice(qml.QubitDevice):
     """
     name = "PennyLane plugin for cuTensorNet of NVIDIA cuQuantum"
     short_name = "cuquantum.cutensornet"
-    pennylane_requires = "2"
+    pennylane_requires = ">=0.20.0"
     version = "0.0.0"
     author = "ymd-h"
 
