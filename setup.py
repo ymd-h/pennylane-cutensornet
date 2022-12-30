@@ -8,6 +8,7 @@ setup(name="pennylane-cutensornet",
       extras_require = {
           "qiskit": ["pennylane-qiskit"],
           "cirq": ["pennylane-cirq"],
+          "test": ["pytest", "pytest_mock", "flaky"],
       },
       entrypoints={"pennylane.plugins": [
           "cuquantum.cutensornet = pennylane_cutensornet.cuTensorNetDevice"
