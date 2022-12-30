@@ -120,7 +120,7 @@ class cuTensorNetDevice(qml.QubitDevice):
         return cuquantum.CircuitToEinsum(self._dev.circuit)
 
 
-    def apply(self, operations: List[qml.Operation], **kwargs):
+    def apply(self, operations: List[qml.operation.Operation], **kwargs):
         conv = self._conv(operations, **kwargs)
         expr, op = conv.state_vector()
         state = cuquantum.contract(expr, *op)
@@ -132,7 +132,7 @@ class cuTensorNetDevice(qml.QubitDevice):
                                                  Iterable[Union[int, str]],
                                                  int,
                                                  str,
-                                                 qml.Wires] = None):
+                                                 qml.wires.Wires] = None):
         if self._state is None:
             return None
 
