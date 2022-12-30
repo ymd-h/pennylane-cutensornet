@@ -140,6 +140,12 @@ class cuTensorNetDevice(qml.QubitDevice):
         return prob
 
 
+    @property
+    def stopping_condition(self):
+        return (qml.BooleanFn(lambda op: op.name in self.operations)
+                or qml.BooleanFn(lambda me: me.name in self.observables))
+
+
     @classmethod
     def capability(cls) -> Dict[str, Any]:
         return {
