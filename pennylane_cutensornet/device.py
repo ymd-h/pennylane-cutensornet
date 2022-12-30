@@ -116,6 +116,7 @@ class cuTensorNetDevice(qml.QubitDevice):
 
     def _conv_cirq(self, operations, **kwargs):
         from pennylane_cirq.cirq_device import CirqDevice
+        self._dev.reset()
         CirqDevice.apply(self._dev, operations, **kwargs)
         return cuquantum.CircuitToEinsum(self._dev.circuit)
 
