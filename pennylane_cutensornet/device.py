@@ -124,15 +124,15 @@ class cuTensorNetDevice(qml.QubitDevice):
         conv = self._conv(operations, **kwargs)
         expr, op = conv.state_vector()
         state = cuquantum.contract(expr, *op)
-        self._state = np.array(state, copy=True)
+        self._state = np.array(state.get(), copy=True)
         return state
 
 
-    def analytic_probabilitiy(self, wires: Union[None,
-                                                 Iterable[Union[int, str]],
-                                                 int,
-                                                 str,
-                                                 qml.wires.Wires] = None):
+    def analytic_probability(self, wires: Union[None,
+                                                Iterable[Union[int, str]],
+                                                int,
+                                                str,
+                                                qml.wires.Wires] = None):
         if self._state is None:
             return None
 
