@@ -137,6 +137,7 @@ class cuTensorNetDevice(qml.QubitDevice):
             return None
 
         prob = self.marginal_prob(np.abs(self._state) ** 2, wires)
+        return prob
 
 
     @classmethod
