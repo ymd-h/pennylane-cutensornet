@@ -3,7 +3,7 @@
 This repository is 3rd party unofficial PennyLane plugin for
 cuTensorNet of NVIDIA cuQuantum.
 
-**Note**
+> **Note**
 > The official PennyLane-Lightning-GPU plugin supports cuStateVec of cuQuantum
 
 ## Usage
